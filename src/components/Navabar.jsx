@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
   // State for mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -62,39 +62,49 @@ function Navbar() {
             {/* Logo and links */}
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex shrink-0 items-center">
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
-                />
+                <Link to="/">
+                  <img
+                    className="h-8 w-auto"
+                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company"
+                  />
+                </Link>
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                    aria-current="page"
-                  >
-                    Dashboard
-                  </a>
-                  <a
-                    href="#"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    Team
-                  </a>
-                  <a
-                    href="#"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    Projects
-                  </a>
-                  <a
-                    href="#"
-                    className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >
-                    Calendar
-                  </a>
+                  <Link to="/">
+                    <a
+                      href="#"
+                      className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                      aria-current="page"
+                    >
+                      Home
+                    </a>
+                  </Link>
+                  <Link to="/about">
+                    <a
+                      href="#"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      About us
+                    </a>
+                  </Link>
+                  <Link to="/contact">
+                    <a
+                      href="#"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      Contact
+                    </a>
+                  </Link>
+                  <Link to="/faq">
+                    <a
+                      href="#"
+                      className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      FAQ
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -153,31 +163,39 @@ function Navbar() {
         {isMobileMenuOpen && (
           <div className="sm:hidden" id="mobile-menu">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              <a
-                href="#"
-                className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-                aria-current="page"
-              >
-                Dashboard
-              </a>
-              <a
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Team
-              </a>
-              <a
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Projects
-              </a>
-              <a
-                href="#"
-                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-              >
-                Calendar
-              </a>
+              <Link to="/">
+                <a
+                  href="#"
+                  className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                  aria-current="page"
+                >
+                  Home
+                </a>
+              </Link>
+              <Link to="/about">
+                <a
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  About
+                </a>
+              </Link>
+              <Link to="/contact">
+                <a
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  Contact
+                </a>
+              </Link>
+              <Link to="/faq">
+                <a
+                  href="#"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  FAQ
+                </a>
+              </Link>
             </div>
           </div>
         )}

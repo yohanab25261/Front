@@ -6,6 +6,7 @@ function Faq() {
   return (
     <>
       <Navbar />
+      FAQ
       <Footer />
     </>
   );
